@@ -6,15 +6,18 @@ content = new Buffer(256);
 
 fs.readFileSync('./index.html', function read(err, data) {
    if (err) {
+       console.log(err);
        throw err;
    }
+   console.log("data is" + data);
    content = data;
+   console.log("\nContent is " + content);
 });
 
 var text = content.toString('utf8');
 
 app.get('/', function(request, response) {
-  response.send('test');
+  response.send(text);
 });
 
 var port = process.env.PORT || 5000;
