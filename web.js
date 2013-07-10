@@ -2,19 +2,16 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-content = new Buffer(256);
+var content = new Buffer(256);
 
 fs.readFileSync('./index.html', function read(err, data) {
    if (err) {
-       console.log(err);
-       throw err;
+      throw err;
    }
-   console.log("data is" + data);
-   content = data;
-   console.log("\nContent is " + content);
+   content.write(data, "utf-8)";  
 });
 
-var text = content.toString('utf8');
+var text = content.toString('utf-8');
 
 app.get('/', function(request, response) {
   response.send(text);
