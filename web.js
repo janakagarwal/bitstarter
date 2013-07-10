@@ -14,7 +14,7 @@ fs.readFileSync('./index.html', function read(err, data) {
 var text = content.toString('utf8');
 
 app.get('/', function(request, response) {
-  response.send(text);
+  response.send('test');
 });
 
 var port = process.env.PORT || 5000;
