@@ -8,13 +8,13 @@ fs.readFileSync('./index.html', function read(err, data) {
    if (err) {
       throw err;
    }
-   content.write(data, "utf-8)";  
+   content = data; //.write(data, "utf-8)";  
 });
 
-var text = content.toString('utf-8');
+//var text = content.toString('utf-8');
 
 app.get('/', function(request, response) {
-  response.send(text);
+  response.send(content.toString('utf-8'));
 });
 
 var port = process.env.PORT || 5000;
