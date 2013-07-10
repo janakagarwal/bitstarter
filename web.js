@@ -5,15 +5,6 @@ var app = express.createServer(express.logger());
 
 var content = fs.readFileSync('index.html', 'utf-8');
 
-//fs.readFileSync('./index.html', function read(err, data) {
-//   if (err) {
-//      throw err;
-//   }
-//   content = data; //.write(data, "utf-8)";  
-//});
-
-//var text = content.toString('utf-8');
-
 app.get('/', function(request, response) {
   response.send(content);
 });
