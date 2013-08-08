@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +15,7 @@
           rel="stylesheet" type="text/css">
     <style type="text/css">
 
-      
+      /* Large desktop */
       @media (min-width: 980px) { 
         body {
          padding-top: 60px;
@@ -27,7 +28,7 @@
        }
       }
 
- 
+      /* Landscape phones and down */
       @media (max-width: 480px) { 
        .copy {
          padding: 2.5% 10%;
@@ -40,9 +41,10 @@
        }
       }
 
- 
+      /* All form factors */
 
-  body{
+      /* Main body and headings */
+      body{
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       }
       .heading, .subheading {
@@ -59,6 +61,7 @@
         line-height: 24px;
       }
 
+      /* Video pitch and Action */
       .pitch {
         padding: 2.5% 0%;
       }
@@ -76,6 +79,7 @@
         color: white;
       }
 
+      /* Marketing Copy and Footer */
       .copy {
         padding-top: 2.5%;
         padding-bottom: 2.5%;
@@ -91,13 +95,15 @@
       .footer p {
         font-size: 11px;
       }
-[B      .footer a {
+      .footer a {
         color: #ccccff;
       }
     </style>
   </head>
   <body>
 
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -119,40 +125,46 @@
       </div>
     </div>
 
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
     <div class="container">
       <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
       <!-- www.google.com/fonts/specimen/Ubuntu -->
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>CourseKart</h1>
+          <h1>CourseKart: Development Version</h1>
         </div>
       </div> 
-      <div class="r[Bow-fluid subheading">
+      <div class="row-fluid subheading">
         <div class="span12">
-
-          <p class="lead">Enrich educational experience through engagement, interaction and access anywhere learning solutions</p>
+          <!-- Special typography from Bootstrap for lead paragraph. -->
+          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+          <p class="lead">Enrich educational experience through engagement, interaction and access anywhere learning solutions.</p>
         </div>
       </div>
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://i.imgur.com/1KchW5y.jpg/480x300">
+          <img class="img-polaroid" alt="Placeholder" src="http://i.imgur.com/1KchW5y.jpg/480x300">
         </div>
 
-       <div class="span5 actions">
+        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+        <div class="span5 actions">
+          <div class="row-fluid">
           <div class="span8 offset2">
-            <div class="statistics">
+            <div class="row-fluid statistics">
               <div class="span4">
                 <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
                 media queries. -->
                 <div class="linediv-l">
-                <h3>100</h3> <p>backers</p>
+                <h3>1000</h3> <p>backers</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-c">
-                  <h3>$1000</h3> <p>of $25,000</p>
+                  <h3>$6000</h3> <p>of $10,000</p>
                 </div>
               </div>
               <div class="span4">
@@ -162,50 +174,50 @@
               </div>
             </div>
           </div>
+          <div class="row-fluid">
           <div class="span10 offset1">
-
+            <!-- Bootstrap progress bar -->
+            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
             <div class="thermometer progress active">
               <div class="bar bar-success" style="width: 60%;"></div>
               <div class="bar bar-warning" style="width: 40%;"></div>
             </div>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span6 offset3 order">
             <!-- Standard Bootstrap button. -->
             <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
             <button class="btn btn-success btn-large">Preorder</button>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span8 offset2 social">
             <!-- Social buttons are not included in default Bootstrap. -->
             <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
             <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
             <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
           </div>
+          </div>
+        </div>
         </div>
       </div>
 
+      <!-- Beyond this part the marketing copy begins. -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+      <!-- http://placehold.it -->
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/oyPHgPm.jpg/480x300">
+          <img class="img-polaroid"  alt="Placeholder" src="http://i.imgur.com/oyPHgPm.jpg/480x300">
         </div>
         <div class="span5 copy">
           <p>
-            Education is the bedrock of our society. But in today’s day and age, it is becoming increasingly difficult for students and instructors alike to manage the chaos and complexity of delivering quality instruction in a simple, efficient and scalable manner. The world is moving at increasing velocity towards embracing digital media and new technologies, but our style of instruction remains ancient – teaching in brick-and-mortar setups using whiteboards and pen-paper, while tablets and laptops are becoming a necessity.
- 
-Each style has its own advantages, and Coursekart is our attempt to harmonize the two styles to deliver a simple, efficient and scalable platform for students and instructors to engage, interact and enrich their educational experience.
-          </p>
-        </div>
-      </div>
-
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            We bring you a new world of possibilities that complement your traditional classroom model. Using a cloud-based technology platform that requires zero asset investment, CourseKart enables you to build a secure, world-class platform to take learning beyond the classroom - both for existing and new students.
-            Flip your classroom model - by sharing content and videos on CourseKart's secure, scalable online environment, while using class time for value-added interactions.
-            At CourseKart, we believe there are more than one ways for you to monetize your knowledge. Optimize your investments and explore a world of new opportunities
+            Education is the bedrock of our society. But in todays day and age, it is becoming increasingly difficult for students and instructors alike to manage the chaos and complexity of delivering quality instruction in a simple, efficient and scalable manner. The world is moving at increasing velocity towards embracing digital media and new technologies, but our style of instruction remains ancient e environment, while using class time for value-added interactions. At CourseKart, we believe there are more than one ways for you to monetize your knowledge. Optimize your investments and explore a world of new opportunities.
           </p>
         </div>
         <div class="span5 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/0DbvcZe.jpg/480x300">
+          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
         </div>
       </div>
 
@@ -220,7 +232,7 @@ Each style has its own advantages, and Coursekart is our attempt to harmonize th
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    What about access on tablets and phones ?
+                    What about access on tablets and phones?
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
@@ -261,3 +273,4 @@ Each style has its own advantages, and Coursekart is our attempt to harmonize th
     </div>
   </body>
 </html>
+
